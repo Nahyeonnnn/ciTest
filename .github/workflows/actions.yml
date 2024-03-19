@@ -48,8 +48,8 @@ jobs:
       - name: Delete Old docker container
         run: |
           sudo docker rm -f container || true
-      # - name: Create .env file
-      #   run: echo "${{ secrets.ENV_FILE }}" | base64 --decode > .env
+      - name: Create .env file
+        run: echo "${{ secrets.ENV_FILE }}" | base64 --decode > .env
       #   error
 
       - name: Run Docker Container
